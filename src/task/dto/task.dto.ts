@@ -1,4 +1,4 @@
 export class TaskDTO {
-    readonly descripcition: string;
+    readonly description: string;
     readonly isDone: boolean;
 }

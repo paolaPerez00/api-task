@@ -35,7 +35,12 @@ export class TaskController {
 
     @Post()
     create(@Body() taskDTO: TaskDTO){
-        throw new BadRequestException('Error en la petición');
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                 reject('Something was wrong!')   
+            }, 5000);
+        })
+        //throw new BadRequestException('Error en la petición');
         //throw new HttpException('Error en la petición', HttpStatus.BAD_REQUEST)
         //return this.taskService.create(taskDTO);
     }
